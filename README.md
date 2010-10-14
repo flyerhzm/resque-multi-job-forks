@@ -32,11 +32,11 @@ You have two limit options available, only one can be used at once.
 
 ### Usage Example
 
-**Process jobs for 5 minutes per fork:**
+Process jobs for 5 minutes per fork:
 
     $ QUEUE=* MINUTES_PER_FORK=5 rake resque:work
 
-**Process 5000 jobs per fork:**
+Process 5000 jobs per fork:
 
     $ QUEUE=* JOBS_PER_FORK=5000 rake resque:work
 
