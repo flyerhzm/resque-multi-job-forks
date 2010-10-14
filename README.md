@@ -30,13 +30,15 @@ You have two limit options available, only one can be used at once.
 
 **Default:** process jobs for *1 minute* before terminating.
 
-You may specify the limit by setting the appropriate each variable:
+### Usage Example
 
-    # process jobs for 5 minutes, then terminate the fork.
-    QUEUE=* MINUTES_PER_FORK=5 rake resque:work
+**Process jobs for 5 minutes per fork:**
 
-    # process 5000 jobs per fork, then terminate.
-    QUEUE=* JOBS_PER_FORK=5000 rake resque:work
+    $ QUEUE=* MINUTES_PER_FORK=5 rake resque:work
+
+**Process 5000 jobs per fork:**
+
+    $ QUEUE=* JOBS_PER_FORK=5000 rake resque:work
 
 ### Resque Hooks
 
