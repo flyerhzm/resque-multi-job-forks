@@ -2,10 +2,13 @@ require 'resque'
 require 'resque/worker'
 
 module Resque
+
+  # Add support to allow a single fork to process multiple jobs.
+  # You may limit the fork to n minutes of execution time, or a total job limit.
   class Worker
-    attr_accessor :seconds_per_fork
-    attr_accessor :jobs_per_fork
-    attr_reader   :jobs_processed
+    attr_accessor :seconds_per_fork # seconds fork may process jobs for.
+    attr_accessor :jobs_per_fork    # total jobs to process per fork.
+    attr_reader   :jobs_processed   # jobs processed by this fork.
 
     unless method_defined?(:shutdown_without_multi_job_forks)
       def perform_with_multi_job_forks(job = nil)
@@ -70,8 +73,8 @@ module Resque
     end
   end
 
-  # the `before_child_exit` hook will run in the child process
-  # right before the child process terminates
+  # the `before_child_exit` hook will run in the child process right before
+  # the child process terminates.
   #
   # Call with a block to set the hook.
   # Call with no arguments to return the hook.

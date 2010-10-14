@@ -1,6 +1,6 @@
 spec = Gem::Specification.new do |s|
   s.name              = 'lantins-resque-multi-job-forks'
-  s.version           = '0.3.0'
+  s.version           = '0.3.1'
   s.date              = Time.now.strftime('%Y-%m-%d')
   s.summary           = 'A Resque plugin; allows workers to process multiple jobs per fork.'
   s.homepage          = 'http://github.com/lantins/resque-multi-job-forks/tree/personal_gem'
