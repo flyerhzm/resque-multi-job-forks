@@ -8,7 +8,7 @@ spec = Gem::Specification.new do |s|
   s.email             = 'mick@staugaard.com'
   s.has_rdoc          = false
 
-  s.files             = %w(LICENSE Rakefile README.rdoc)
+  s.files             = %w(LICENSE Rakefile README.md)
   s.files            += Dir.glob('{test/*,lib/**/*}')
   s.require_paths     = ['lib']
 
