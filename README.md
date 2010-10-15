@@ -1,5 +1,5 @@
-resque-multi-job-forks
-======================
+lantins-resque-multi-job-forks
+==============================
 
 If you have very frequent and fast resque jobs, the overhead of forking and
 running your after_fork hook, might get too big. Using this resque plugin, you
