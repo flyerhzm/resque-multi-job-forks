@@ -12,7 +12,7 @@ begin
     gem.email = "mick@staugaard.com"
     gem.homepage = "http://github.com/staugaard/resque-multi-job-forks"
     gem.authors = ["Mick Staugaard"]
-    gem.add_dependency "resque", "< 1.8.0"
+    gem.add_dependency "resque", ">= 1.6.0"
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError

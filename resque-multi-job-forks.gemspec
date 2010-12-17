@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "lib/resque-multi-job-forks.rb",
+    "resque-multi-job-forks.gemspec",
     "test/helper.rb",
     "test/test_resque-multi-job-forks.rb"
   ]
@@ -40,12 +41,12 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<resque>, ["< 1.8.0"])
+      s.add_runtime_dependency(%q<resque>, [">= 1.6.0"])
     else
-      s.add_dependency(%q<resque>, ["< 1.8.0"])
+      s.add_dependency(%q<resque>, [">= 1.6.0"])
     end
   else
-    s.add_dependency(%q<resque>, ["< 1.8.0"])
+    s.add_dependency(%q<resque>, [">= 1.6.0"])
   end
 end
 
